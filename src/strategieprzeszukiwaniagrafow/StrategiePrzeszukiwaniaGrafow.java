@@ -10,33 +10,45 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.layout.StackPane;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 /**
- *
  * @author greg
  */
 public class StrategiePrzeszukiwaniaGrafow extends Application {
     
     @Override
     public void start(Stage primaryStage) {
-        Button btn = new Button();
-        btn.setText("Say 'Hello World'");
-        btn.setOnAction(new EventHandler<ActionEvent>() {
-            
+        Pane root = new Pane();
+        Button nextBtn = new Button();
+        nextBtn.setText(" Next ");
+        nextBtn.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                System.err.println("Hello World!");
+                System.err.println("next step");
             }
         });
         
-        StackPane root = new StackPane();
-        root.getChildren().add(btn);
+        root.getChildren().add(nextBtn);
+        nextBtn.setLayoutX(5);
+        nextBtn.setLayoutY(5);
+        
+        Button prevBtn = new Button();
+        prevBtn.setText(" Prev ");
+        prevBtn.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                System.err.println("prev step");
+            }
+        });
+        root.getChildren().add(prevBtn);
+        prevBtn.setLayoutX(65);
+        prevBtn.setLayoutY(5);
         
         Scene scene = new Scene(root, 700, 700);
         
-        primaryStage.setTitle("Hello World!");
+        primaryStage.setTitle("Strategie przeszukiwania grafów");
         primaryStage.setScene(scene);
         primaryStage.show();
     }
@@ -47,5 +59,4 @@ public class StrategiePrzeszukiwaniaGrafow extends Application {
     public static void main(String[] args) {
         launch(args);
     }
-    
 }
