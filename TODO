@@ -3,7 +3,9 @@
 - Stworzyć klasy odpowiadające za przeszukiwanie grafów
   - DFS
   - BFS
-  
+  - LCS
+  - AStar
+- Wczytywanie grafów z pliku
 - Rysowanie grafów
 
 - Dokumentacja projektowa
