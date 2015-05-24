@@ -27,14 +27,14 @@ public class StrategiePrzeszukiwaniaGrafow extends Application {
             
             @Override
             public void handle(ActionEvent event) {
-                System.out.println("Hello World!");
+                System.err.println("Hello World!");
             }
         });
         
         StackPane root = new StackPane();
         root.getChildren().add(btn);
         
-        Scene scene = new Scene(root, 300, 250);
+        Scene scene = new Scene(root, 700, 700);
         
         primaryStage.setTitle("Hello World!");
         primaryStage.setScene(scene);
